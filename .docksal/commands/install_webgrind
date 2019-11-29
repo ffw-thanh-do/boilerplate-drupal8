@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+rm -rf /tmp/master.zip
+rm -rf /var/www/docroot/webgrind
+wget https://github.com/jokkedk/webgrind/archive/master.zip -P /tmp
+unzip /tmp/master.zip -d /var/www/docroot
+mv /var/www/docroot/webgrind-master /var/www/docroot/webgrind
+sudo apt update -y
+sudo apt-get install graphviz -y
+sudo cp /var/www/.docksal/etc/php/.htaccess /var/www/docroot/webgrind/

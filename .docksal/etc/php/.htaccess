@@ -1,0 +1,8 @@
+#
+# Apache/PHP/Drupal settings:
+#
+
+# Various rewrite rules.
+<IfModule mod_rewrite.c>
+  RewriteCond %{THE_REQUEST} !/webgrind/.*
+</IfModule>
